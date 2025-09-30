@@ -1,0 +1,158 @@
+@charset "utf-8";
+.cabecalho{ 
+    display:flex;
+    flex-direction: column;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+  
+    text-align: center;
+    background-color:cyan;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+#container{
+    display:grid;
+    grid-template-columns: repeat(5, auto); 
+    grid-template-rows:repeat(2, auto);
+    padding: 2vw;
+    gap: 0.2vw 0.2vw;
+    position: relative;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    border-radius: 2%;
+}
+
+.item{
+
+   background:#000000;
+    margin: 1vw;
+    height: 16vw;
+    width: 15vw;
+    border:0.2vw solid #021726;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    margin-top: 2%;
+    height: 10%;
+    width: 100%;
+    font-size: 1vw; 
+}
+
+.itemDescriptiion 
+{
+  background-color: #0000007d;
+  width: 9vw;
+  height: 9vw;
+  border: solid 2px green;
+  padding-left: 1.5vw;
+  position: absolute;
+  z-index: 10; /* Garante que a descrição fique acima da imagem */
+  color: #FFFFFF;
+}
+
+#caixaDeTexto {
+  size:0.5vw;
+  border: 2px solid#000000;
+  padding: 2%;
+  margin-top: 2%;
+  border-radius: 2%;
+  background-color: #9fd5f9;
+    position: absolute;
+    z-index: 10; /* Garante que a caixa de texto fique acima da imagem */
+ }
+ p{
+    font-size: 0.8vw;
+ }
+
+ /* estilo do botão */
+#btnCadastro {
+  background-color: #4CAF50;  /* cor de fundo */
+  color: white;              /* cor do texto */
+  border: none;              /* sem borda */
+  padding: 12px 24px;        /* espaçamento interno */
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;        /* bordas arredondadas */
+  cursor: pointer;           /* cursor de mãozinha */
+  transition: 0.3s;          /* animação suave */
+}
+
+/* efeito ao passar o mouse */
+#btnCadastro:hover {
+  background-color: #45a049;
+}
+
+/* efeito ao clicar */
+#btnCadastro:active {
+  background-color: #367c39;
+}
+
+/* container centralizado */
+.container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* título */
+.container h1 {
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* formulário */
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+/* labels */
+.form-cadastro label {
+  font-weight: bold;
+  color: #444;
+}
+
+/* inputs */
+.form-cadastro input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-cadastro input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px rgba(76,175,80,0.5);
+}
+
+/* botão enviar */
+.btn-enviar {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: 0.3s;
+}
+
+.btn-enviar:hover {
+  background: #45a049;
+}
