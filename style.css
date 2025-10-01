@@ -1,15 +1,18 @@
 @charset "utf-8";
 .cabecalho{ 
     display:flex;
-    flex-direction: column;
-    /*flex-direction: row;*/
+    flex-direction:row;
     justify-content: space-between;
-  
     text-align: center;
-    background-color:cyan;
+    font-size: 1vw;
     align-items: center;
-    padding: 20px;
-    border-bottom: 2px solid #e0e0e0;
+    background-color:cyan;
+    height: 20%;
+    width: 93%;
+    margin-top: 2%;
+    margin-left: 3%;
+    
+
 }
 
 #container{
@@ -76,10 +79,10 @@
   background-color: #4CAF50;  /* cor de fundo */
   color: white;              /* cor do texto */
   border: none;              /* sem borda */
-  padding: 12px 24px;        /* espaçamento interno */
+  padding: 1.0vw 1.2vw;        /* espaçamento interno */
   text-align: center;
-  font-size: 16px;
-  border-radius: 8px;        /* bordas arredondadas */
+  font-size: 1vw;
+  border-radius: 0.8vw;        /* bordas arredondadas */
   cursor: pointer;           /* cursor de mãozinha */
   transition: 0.3s;          /* animação suave */
 }
@@ -154,5 +157,5 @@
 }
 
 .btn-enviar:hover {
-  background: #45a049;
+  background:cyan;
 }
