@@ -46,4 +46,43 @@ if (btnVoltar) {
 }
 
 
+async function carregarProdutos() {
+  const resposta = await fetch('http://localhost:3000/produtos');
+  const produtos = await resposta.json();
+  console.log(produtos);
+  // aqui você pode gerar dinamicamente os itens no HTML
+}
+
+// Enviar dados do cadastro para o servidor
+const formCadastro = document.getElementById('formCadastro');
+
+if (formCadastro) {
+  formCadastro.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const descricao = document.getElementById('descricao').value.trim();
+
+    if (!nome || !telefone || !descricao) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+
+    try {
+      const resposta = await fetch('http://localhost:3000/cadastro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, telefone, descricao })
+      });
+
+      const data = await resposta.json();
+      alert(data.mensagem);
+      formCadastro.reset();
+    } catch (erro) {
+      alert('Erro ao conectar com o servidor.');
+      console.error(erro);
+    }
+  });
+}
 
