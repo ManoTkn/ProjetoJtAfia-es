@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+htm<!DOCTYPE html>
  <html lang="pt-br">
  <head>
     <meta charset="UTF-8">
@@ -10,12 +10,10 @@
    
  </head>
  <body>
-<div class="header">
-     <img class="logo" src="img/logo.Jt.png">
-    <div class="cabecalho">
-        <h1 class="texto">Bem-vindo à Jt Afiações!</h1>
-        <button id="btnCadastro">Cadastre-se</button> 
-    </div>
+
+<div class="cabecalho">
+    <h1>Bem-vindo à Jt Afiações!</h1>
+    <button id="btnCadastro">Cadastre-se</button> 
 </div>
 
 
@@ -25,7 +23,7 @@
         <img  class="img" src="img/Serra circular(s21fe).jpg">
         <button class="btn" onclick="toggleCaixa('caixaDeTexto1')">Saiba mais</button>
 
-        <div class="itemDescription" id="caixaDeTexto1" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto1" style="display: none;">
             <p> serra de maquita R$15 </p>
             <p> serra até 40 dentes R$30 </p>
             <p>serra até 80 dentes R$35 </p>
@@ -39,7 +37,7 @@
         <img  class="img" src="img/serra fita.jpeg">
         <button class="btn" onclick="toggleCaixa('caixaDeTexto2')"> Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto2" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto2" style="display: none;">
             <p>serra de cortar carne R$40 </p>
             <p>serra fita até 2m R$60 </p>
             <p>serra fita até 3m R$85 </p>
@@ -51,7 +49,7 @@
         <img class="img" src="img/lâmina plaina(s21fe).jpg">
         <button class="btn" onclick="toggleCaixa('caixaDeTexto3')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto3" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto3" style="display: none;">
             <p>plaina manual R$20</p>
             <p>plaina estacionaria R$30</p>
             <p>lâmina picador R$40</p>
@@ -63,7 +61,7 @@
         <img class="img" src="img/serra copo.png">
         <button class="btn" onclick="toggleCaixa('caixaDeTexto4')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto4" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto4" style="display: none;">
             <p>serra até 30mm R$15</p>
             <p>serra até 60mm R$20</p>
             <p>serra até 100mm R$25</p>
@@ -75,7 +73,7 @@
         <img class="img" src="img/serra sabre.webp" >
         <button class="btn" onclick="toggleCaixa('caixaDeTexto5')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto5" style="display: none; " absolute>
+        <div class="itemDescriptiion" id="caixaDeTexto5" style="display: none; " absolute>
             <p> Serra para madeira $15 </p>
             <p> Serra para metal pra  R$20 </p>
         </div>
@@ -85,7 +83,7 @@
         <img class="img" src="img/brocas para madeira(s21fe).jpg" >
         <button class="btn" onclick="toggleCaixa('caixaDeTexto6')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto6" style="display: none; " absolute>
+        <div class="itemDescriptiion" id="caixaDeTexto6" style="display: none; " absolute>
             <p> Brocas de 3 até 5mm R$5 </p>
             <p> Brocas de 6 até 30mm R$10 </p>
             <p>Broca chata R$15 </p>
@@ -99,7 +97,7 @@
         <img class="img"src="img/fresa tupia de bancada(s21fe).jpg"  >
         <button class="btn" onclick="toggleCaixa('caixaDeTexto7')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto7" style="display: none; " absolute>
+        <div class="itemDescriptiion" id="caixaDeTexto7" style="display: none; " absolute>
             <p>fresa pequena R$25</p>
             <p>fresa média R$35</p>
             <p>fresa grande R$45</p>
@@ -112,7 +110,7 @@
         <img class="img"  src="img/serrote.jpeg" >
         <button class="btn" onclick="toggleCaixa('caixaDeTexto8')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto8" style="display: none; " absolute>
+        <div class="itemDescriptiion" id="caixaDeTexto8" style="display: none; " absolute>
             <p> Apenas afiar R$15</p>
             <p> Afiar e travar R$30</p>
         </div>
@@ -122,7 +120,7 @@
         <img  class="img" src="img/facas.jpeg">
         <button class="btn" onclick="toggleCaixa('caixaDeTexto9')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto9" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto9" style="display: none;">
             <p> facas de cozinha R$10 </p>
             <p> facão R$15</p> 
         </div>
@@ -133,7 +131,7 @@
         <img  class="img" src="img/maquina de cortar grama.jpeg">
         <button  class="btn" onclick="toggleCaixa('caixaDeTexto10')">Saiba mais</button>
            
-        <div class="itemDescription" id="caixaDeTexto10" style="display: none;">
+        <div class="itemDescriptiion" id="caixaDeTexto10" style="display: none;">
             <p> lâmina de rossadeira R$10 </p>
             <p> lâmina de maquina grande R$15</p> 
         </div>    

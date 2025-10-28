@@ -1,17 +1,22 @@
 
 
-
 function toggleCaixa(id) {
-    // Encontra a caixa de texto específica usando o ID que foi passado
-    const caixaDeTexto = document.getElementById(id);
+  const alvo = document.getElementById(id);
+  const caixas = document.querySelectorAll('.itemDescription');
 
-    if (caixaDeTexto.style.display === "none") {
-        caixaDeTexto.style.display = "block";
-    } else {
-        caixaDeTexto.style.display = "none";
+   if(!alvo) return;
+
+   const estaAberta = alvo.style.display=== 'block';
+
+     caixas.forEach(caixa => {
+       caixa.style.display = 'none';
+    });
+     
+    if(!estaAberta) {
+      alvo.style.display = 'block';
     }
-
-}
+  }
+ 
 
 
 function cadastro(id) {
