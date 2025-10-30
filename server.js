@@ -10,8 +10,8 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
-  database: 'jtafiacoes'
+  password: 'root',
+  database: 'cadastro'
 });
 
 db.connect(err => {
@@ -39,7 +39,7 @@ app.post('/cadastro', (req, res) => {
     return res.status(400).json({ mensagem: 'Todos os campos são obrigatórios!' });
   }
 
-  const sql = 'INSERT INTO clientes (nome, telefone, descricao) VALUES (?, ?, ?)';
+  const sql = 'INSERT INTO servicos (nome, telefone, descricao) VALUES (?, ?, ?)';
   db.query(sql, [nome, telefone, descricao], (erro) => {
     if (erro) {
       console.error('Erro ao salvar no banco:', erro);
