@@ -17,24 +17,15 @@ function toggleCaixa(id) {
     }
   }
  
-
-
-function cadastro(id) {
-    // Encontra a caixa de texto específica usando o ID que foi passado
-    const caixaDeTexto = document.getElementById(id);
-    const descricao = document.getElementById("Teste")
-    const valorDesc = descricao.value;
-
-    num = 54996668329;
-    window.open("https://wa.me/"+num+"?text="+valorDesc+"");
-   
-}
   // botão que leva para cadastro
-const btnCadastro = document.getElementById("btnCadastro");
-if (btnCadastro) {
-  btnCadastro.addEventListener("click", () => {
-    window.location.href = "cadastro.html";
-  });
+function IrPagCadastro()
+{
+  window.location.href = "cadastro.html";
+}
+
+function goToCadastro()
+{
+  window.location.href = "Adm.html";
 }
 
 // botão que leva de volta para home
@@ -44,7 +35,6 @@ if (btnVoltar) {
     window.location.href = "home.html";
   });
 }
-
 
 async function carregarProdutos() {
   const resposta = await fetch('http://localhost:3000/produtos');
@@ -78,6 +68,8 @@ if (formCadastro) {
 
       const data = await resposta.json();
       alert(data.mensagem);
+     SendToWhatsApp(descricao);
+     
       formCadastro.reset();
     } catch (erro) {
       alert('Erro ao conectar com o servidor.');
@@ -86,3 +78,8 @@ if (formCadastro) {
   });
 }
 
+function SendToWhatsApp(valorDesc) {
+    num = 54996668329;
+    window.open("https://wa.me/"+num+"?text="+valorDesc+"");
+   
+}

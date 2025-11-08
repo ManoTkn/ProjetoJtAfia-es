@@ -6,12 +6,21 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Conexão com o banco
+////Conexão com o banco Local
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'root',
+//   database: 'cadastro'
+// });  
+
+// Conexão com o banco Online
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'cadastro'
+  host: 'sql3.freesqldatabase.com',
+  port: 3306,
+  user: 'sql3806097',
+  password: 'NGanHevbAM',
+  database: 'sql3806097'
 });
 
 db.connect(err => {
@@ -24,7 +33,7 @@ db.connect(err => {
 
 
 async function carregarProdutos() {
-  const resposta = await fetch('http://localhost:3000/produtos');
+  const resposta = await fetch('http://127.0.0.1:5500/produtos');
   const produtos = await resposta.json();
   console.log(produtos);
   // aqui você pode gerar dinamicamente os itens no HTML
@@ -49,4 +58,4 @@ app.post('/cadastro', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Servidor rodando em http://localhost:3000'));
+app.listen(3000, () => console.log('Servidor rodando em http://127.0.0.1:5500'));
