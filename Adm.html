@@ -1,33 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendas por Categoria</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin: 0 0 20px 0;
+        color: #444;
+    }
+
+    .filters {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .filters input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background: cyan;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    th, td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #fafafa;
+        font-weight: bold;
+    }
+
+    .total-row {
+        background: cyan;
+        color: white;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
-  
-  <div class="container">
-    <h2>Cadastro e Solicitação de Serviço</h2>
-    <form id="formCadastro" class="form-cadastro">
-      
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-      
-      <label for="telefone">Telefone:</label>
-      <input type="text" id="telefone" name="telefone" required>
-      
-      <label for="descricao">Descrição:</label>
-      <input type="text" id="descricao" name="descricao" required>
-     
-      <div class="botoes">
-        <button id="btnVoltar" type="button">Voltar</button>
-        <button type="submit" class="btn-enviar">Solicitar</button>
-      </div>
 
-    </form>
-  </div>
+<div class="container">
+    <h2>Dados do Cliente</h2>
 
-  <script src="script.js"></script>
+    <div class="filters">
+        <div>
+            <label>Data início</label><br>
+            <input type="datetime-local">
+        </div>
+
+        <div>
+            <label>Data fim</label><br>
+            <input type="datetime-local">
+        </div>
+
+        <button class="btn">Pesquisar</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th id="Nome">Nome</th>
+                <th>Telefone</th>
+                <th>Descrição</th>
+              
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Sabores</td>
+                <td>R$ 4.123,00</td>
+                <td>R$ 2.117,00</td>
+                
+            </tr>
+
+            <tr>
+                <td>Milkshake</td>
+                <td>R$ 1.101,00</td>
+                <td>R$ 311,00</td>
+                
+            </tr>
+
+            <tr>
+                <td>Combos</td>
+                <td>R$ 512,00</td>
+                <td>R$ 123,00</td>
+               
+            </tr>
+
+           
+        </tbody>
+    </table>
+</div>
+
 </body>
 </html>

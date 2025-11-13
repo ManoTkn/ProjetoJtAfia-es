@@ -6,22 +6,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-////Conexão com o banco Local
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'root',
-//   database: 'cadastro'
-// });  
+//Conexão com o banco Local
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'cadastro'
+});  
 
 // Conexão com o banco Online
-const db = mysql.createConnection({
-  host: 'sql3.freesqldatabase.com',
-  port: 3306,
-  user: 'sql3806097',
-  password: 'NGanHevbAM',
-  database: 'sql3806097'
-});
+// const db = mysql.createConnection({
+//   host: 'sql3.freesqldatabase.com',
+//   port: 3306,
+//   user: 'sql3806097',
+//   password: 'NGanHevbAM',
+//   database: 'sql3806097'
+// });
 
 db.connect(err => {
   if (err) {
