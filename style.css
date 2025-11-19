@@ -14,7 +14,7 @@
 .cabecalho{ 
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background-color:cyan;
     height: 50%;
@@ -24,30 +24,25 @@
     border:0.2vw solid #021726;
     gap: 2vw;
     margin-bottom: -1%;
-  
-    
-
 }
 
 .texto{
-    text-align: center;
-    margin-left: 5%;
-    font-size: 1.5vw;
-    font-weight: bold;
-    color:#1b1919;
+  margin-left: 5%;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color:#1b1919;
+
   }
   
   #btnCadastro {
-   margin-right: 3%;
-   height: 3vw;
-   width: 8vw;
-   gap : 2vw;
+   height: 2vw;
+   width: 6vw;
+   margin-left: auto;
    background-color: #4CAF50;  /* cor de fundo */
    color: white;              /* cor do texto */
-   border: none;              /* sem borda */
-   padding: 0.8vw 1vw;        /* espaçamento interno */
+   border: 0.2vw solid#131212;              /* sem borda */       /* espaçamento interno */
    font-size: 0.8vw;
-   border-radius: 0.8vw;        /* bordas arredondadas */
+   border-radius: 0.3vw;        /* bordas arredondadas */
    cursor: pointer;           /* cursor de mãozinha */
    transition: 0.3s;     
     /* animação suave */
@@ -62,6 +57,28 @@
   #btnCadastro:active {
    background-color: #367c39;
   }
+
+   #btnAdm {
+   margin-right: 3%;
+   height: 2vw;
+   width: 3vw;
+   background-color: rgb(80, 33, 33);  /* cor de fundo */
+   color: white;              /* cor do texto */
+   border: 0.2vw solid#8a0c0c;                
+   font-size: 0.8vw;
+   border-radius: 0.2vw;        /* bordas arredondadas */
+   cursor: pointer;           /* cursor de mãozinha */
+   transition: 0.3s;     
+    /* animação suave */
+  }
+  
+  /* efeito ao passar o mouse */
+  #btnAdm:hover {
+   background-color: rgb(87, 95, 95);
+  }
+  
+
+
 
 #container{
     display:grid;
