@@ -32,14 +32,6 @@ db.connect(err => {
 });
 
 
-async function carregarProdutos() {
-  const resposta = await fetch('http://127.0.0.1:5500/produtos');
-  const produtos = await resposta.json();
-  console.log(produtos);
-  // aqui você pode gerar dinamicamente os itens no HTML
-}
-
-
 // Rota para salvar nome, telefone e descrição
 app.post('/cadastro', (req, res) => {
   const { nome, telefone, descricao } = req.body;
@@ -55,6 +47,21 @@ app.post('/cadastro', (req, res) => {
       return res.status(500).json({ mensagem: 'Erro ao salvar no banco!' });
     }
     res.json({ mensagem: 'Solicitação registrada com sucesso!' });
+  });
+});
+
+
+
+
+app.get("/Adm", (req, res) => {
+  const sql = "SELECT nome, telefone, descricao FROM servicos";
+  
+  conexao.query(sql, (erro, resultados) => {
+    if (erro) {
+      return res.status(500).json({ erro: "Erro no banco" });
+    }
+    
+    res.json(resultados);
   });
 });
 
