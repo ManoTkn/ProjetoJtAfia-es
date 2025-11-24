@@ -54,9 +54,9 @@ app.post('/cadastro', (req, res) => {
 
 
 app.get("/Adm", (req, res) => {
-  const sql = "SELECT nome, telefone, descricao FROM servicos";
+  const sql = "SELECT Nome FROM servicos";
   
-  conexao.query(sql, (erro, resultados) => {
+  db.query(sql, (erro, resultados) => {
     if (erro) {
       return res.status(500).json({ erro: "Erro no banco" });
     }
@@ -65,4 +65,4 @@ app.get("/Adm", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Servidor rodando em http://127.0.0.1:5500'));
+app.listen(3000, () => console.log('Servidor rodando em http://127.0.0.1:3000'));

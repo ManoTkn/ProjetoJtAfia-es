@@ -1,6 +1,6 @@
 async function carregarClientes() {
   try {
-    const resposta = await fetch("http://localhost:5500/Adm");
+    const resposta = await fetch("http://127.0.0.1:3000/Adm");
     const clientes = await resposta.json();
 
     const tbody = document.querySelector("table tbody");
@@ -10,9 +10,9 @@ async function carregarClientes() {
       const linha = document.createElement("tr");
 
       linha.innerHTML = `
-        <td>${cli.nome}</td>
-        <td>${cli.telefone}</td>
-        <td>${cli.descricao}</td>
+        <td>${cli.Nome}</td>
+        <td>${cli.Telefone}</td>
+        <td>${cli.Descricao}</td>
       `;
 
       tbody.appendChild(linha);
