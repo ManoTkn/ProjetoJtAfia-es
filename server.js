@@ -54,7 +54,7 @@ app.post('/cadastro', (req, res) => {
 
 
 app.get("/Adm", (req, res) => {
-  const sql = "SELECT Nome FROM servicos";
+  const sql = "SELECT * FROM servicos";
   
   db.query(sql, (erro, resultados) => {
     if (erro) {
@@ -62,6 +62,22 @@ app.get("/Adm", (req, res) => {
     }
     
     res.json(resultados);
+  });
+});
+
+// Rota corrigida para limpar a tabela
+app.delete("/limpar", (req, res) => {
+  console.log("Rota /limpar acessada. Tentando truncar a tabela...");
+  
+  const sql = "TRUNCATE TABLE servicos";
+
+  db.query(sql, (erro) => {
+    if (erro) {
+      console.error("Erro ao limpar a tabela:", erro);
+      return res.status(500).json({ mensagem: "Erro ao limpar a tabela!" });
+    }
+
+    res.json({ mensagem: "Tabela de serviços limpa com sucesso!" });
   });
 });
 

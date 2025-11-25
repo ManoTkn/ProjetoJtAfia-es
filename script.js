@@ -83,3 +83,28 @@ function SendToWhatsApp(valorDesc) {
     window.open("https://wa.me/"+num+"?text="+valorDesc+"");
    
 }
+
+
+// botão limpar tabela
+const btnLimpar = document.getElementById("btnLimpar");
+
+if (btnLimpar) {
+  btnLimpar.addEventListener("click", async () => {
+
+    if (!confirm("Deseja realmente limpar toda a tabela?")) return;
+
+    try {
+      const resposta = await fetch("http://localhost:3000/limpar", {
+        method: "DELETE"
+      });
+      
+      const data = await resposta.json();
+      alert(data.mensagem); // Mensagem "Tabela de serviços limpa com sucesso!"
+      
+      location.reload();
+    } catch (erro) {
+      console.error("Erro:", erro);
+      alert("Erro ao tentar limpar a tabela!");
+    }
+  });
+}
